@@ -40,7 +40,7 @@ questionContainer2.addEventListener('click', ()=>{
 questionContainer3.addEventListener('click', ()=>{
     if(isClosed){
         paragraphe3.style.display = 'none';
-        questionContainer2Img.src = 'assets/images/icon-plus.svg';
+        questionContainer3Img.src = 'assets/images/icon-plus.svg';
     }else{
         paragraphe3.style.display = 'block';
         questionContainer3Img.src = 'assets/images/icon-minus.svg';
