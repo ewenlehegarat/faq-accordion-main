@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* #################################### */
+/* ######### Global ######### */
+/* #################################### */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans";
+}
+
+:root{
+    /* ##### Color ##### */
+    --White: hsl(0, 100%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Purple-100: hsl(275, 100%, 97%);
+    --Purple-600: hsl(292, 16%, 49%);
+    --Purple-950: hsl(292, 42%, 14%);
+    --Violet-600: hsl(281, 83%, 54%);
+
+    /* ##### Spacing ##### */
+    --Spacing-100: 8px;
+    --Spacing-200: 16px;
+    --Spacing-300: 24px;
+    --Spacing-400: 32px;
+    --Spacing-500: 40px;
+
+    /* ##### Font size ##### */
+    --Font-size-16: 16px;
+    --Font-size-18: 18px;
+    --Font-size-56: 56px;
+
+    /* ##### Line Height ##### */
+    --Line-height-21: 21px;
+    --Line-height-24: 24px;
+    --Line-height-66: 66px;
+
+    /* ##### Font Weight ##### */
+    --Font-weight-regular: 400;
+    --Font-weight-semi-bold: 600;
+    --Font-weight-bold: 700;
+}
+
+
+/* #################################### */
+/* ######### Body ######### */
+/* #################################### */
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Purple-100);
+    background-image: url(assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 0 var(--Spacing-300);
+}
+
+/* #################################### */
+/* ######### Card ######### */
+/* #################################### */
+.card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: var(--Spacing-300);
+    background-color: var(--White);
+    border-radius: 8px;
+    gap: var(--Spacing-300);
+    box-shadow: 0 32px 56px 0 #51007610;
+    max-width: 600px;
+
+    /* ##### Header ##### */
+    header{
+        display: flex;
+        align-items: center;
+        gap: var(--Spacing-300);
+        /* img */
+        img{
+            width: 20.99px;
+            height: 20.99px;
+        }
+        /* h1 */
+        h1{
+            font-weight: var(--Font-weight-bold);
+            font-size: 32px;
+            line-height: auto;
+        }
+    }
+
+    /* ##### Faq list ##### */
+    .faq_list{
+        display: flex;
+        flex-direction: column;
+        gap: var(--Spacing-300);
+        /* #### Faq item #### */
+        .faq_item{
+            display: flex;
+            flex-direction: column;
+            gap: var(--Spacing-300);
+
+            /* ### Question container ### */
+            .question_container{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+
+                /* h2 */
+                h2{
+                    font-weight: var(--Font-weight-semi-bold);
+                    font-size: 16px;
+                    color: var(--Purple-950);
+                    line-height: auto;
+                }
+
+                /* img */
+                img{
+                    width: 24.38px;
+                    height: 24.38px;
+                }
+            }
+            .question_container:hover{
+                h2{
+                    color: var(--Violet-600);
+                }
+            }
+            p{
+                font-weight: var(--Font-weight-regular);
+                font-size: 14px;
+                line-height: 150%;
+                color: var(--Purple-600);
+            }
+            .paragraphe_2, .paragraphe_3, .paragraphe_4{
+                display: none;
+            }
+        }
+        /* #### Divider #### */
+        .divider{
+            height: 1px;
+            background-color: var(--Purple-100);
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    /* #################################### */
+    /* ######### Body ######### */
+    /* #################################### */
+    body{
+        background-image: url(assets/images/background-pattern-desktop.svg);
+        padding: 0 84px;
+        background-position: 0 -1%;
+    }
+
+
+    /* #################################### */
+    /* ######### Card ######### */
+    /* #################################### */
+    .card{
+        padding: var(--Spacing-500);
+        border-radius: 16px;
+        gap: var(--Spacing-400);
+        /* ##### Header ##### */
+        header{
+            /* img */
+            img{
+                width: 34.99px;
+                height: 34.98px;
+            }
+            /* h1 */
+            h1{
+                font-size: 56px;
+                line-height: 66px;
+            }
+        }
+
+        /* ##### Faq list ##### */
+        .faq_list{
+            display: flex;
+            flex-direction: column;
+            gap: var(--Spacing-300);
+            /* #### Faq item #### */
+            .faq_item{
+
+                /* ### Question container ### */
+                .question_container{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+
+                    /* h2 */
+                    h2{
+                        font-size: var(--Font-size-18);
+                        line-height: 21px;
+                    }
+                }
+                p{
+                    font-size: var(--Font-size-16);
+                    line-height: 24px;
+                }
+                .paragraphe_2, .paragraphe_3, .paragraphe_4{
+                    display: none;
+                }
+            }
+        }
+    }
+}
